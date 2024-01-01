@@ -7,6 +7,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Pagination from "../../components/Pagination";
 import Products from "../../components/Products";
+import Search from "@/components/Search";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -31,21 +32,25 @@ export default function Home() {
   
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        {/* Assuming the CSS files are in the public directory */}
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/style.css" />
       </Head>
       <div className="bg-white w-full min-h-screen">
         <Header />
-        <Container>
+        {/* <Container> */}
+          <Search/>
           <Category
             category="All Products"
             categoryCount={`${products.length} Products`}
           />
           <Products products={products} />
           <Pagination />
-        </Container>
+        {/* </Container> */}
         <Footer />
       </div>
     </div>

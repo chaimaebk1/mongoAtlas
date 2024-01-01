@@ -59,95 +59,78 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className="container mx-auto px-6 py-3">
-          <div className="flex items-center justify-between">
-            <Link href="/">
-              <div className="w-full text-green-500 text-2xl font-semibold cursor-pointer">
-                MongoStore
-              </div>
-            </Link>
-            <div className="flex items-center justify-end w-full">
-              <button className="text-gray-600 focus:outline-none mx-4 sm:mx-0">
-                <ShoppingCartIcon
-                  onClick={() => setIsCartOpen(!isCartOpen)}
-                  className="h-5 w-5"
-                />
-              </button>
-
-              <div className="flex sm:hidden">
-                <button
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  type="button"
-                  className="text-gray-600 hover:text-gray-500 focus:outline-none focus:text-gray-500"
-                  aria-label="toggle menu"
-                >
-                  <MenuIcon className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <nav
-            className={`${
-              isMenuOpen ? "" : "hidden"
-            } sm:flex sm:justify-center sm:items-center mt-4`}
-          >
-            <div className="flex flex-col sm:flex-row">
-              <div className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0">
-                <Link href="/">Home</Link>
-              </div>
-              <div className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0">
-                <Link href="/products">Shop</Link>
-              </div>
-              <div
-                className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0"
-                href="#"
+        <div className="container " style={{position : "fixed" , zIndex : "1000"}}>
+        <div className="2xl:container 2xl:mx-auto" >
+            <div className="bg-white rounded shadow-lg py-5 px-7" style={{backgroundColor : "#1E1916"}}>
+              <nav
+                className={`${
+                  isMenuOpen ? "" : "hidden"
+                } sm:flex flex justify-between`}
               >
-                <Link href="/products/category">Categories</Link>
-              </div>
-              <a
-                className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0"
-                href="#"
-              >
-                Contact
-              </a>
-              <a
-                className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0"
-                href="#"
-              >
-                About
-              </a>
-            </div>
-          </nav>
+                {/* <div className="flex items-center justify-between"> */}
+                <div className="flex items-center  w-full">
+                  <div className="justify-start">
+                    <Link href="/">
+                      <div className="flex items-center space-x-3 lg:pr-16 pr-6r">
+                      <svg className="w-[50px] h-[50px] fill-[#eaa636]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M416 0C400 0 288 32 288 176V288c0 35.3 28.7 64 64 64h32V480c0 17.7 14.3 32 32 32s32-14.3 32-32V352 240 32c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7V480c0 17.7 14.3 32 32 32s32-14.3 32-32V255.6c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16V150.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8V16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"></path>
 
-          <div className="relative mt-6 max-w-lg mx-auto">
-            <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
-              <SearchIcon className="h-5 w-5" />
-            </span>
-            <form onSubmit={handleSubmit}>
-              <input
-                className="w-full border rounded-md pl-10 pr-4 py-2 focus:border-green-500 focus:outline-none focus:shadow-outline"
-                type="text"
-                placeholder="Search"
-                onChange={(e) => setSearchTerm(e.target.value)}
-                value={searchTerm}
-              />
-            </form>
-            {autoComplete.length > 0 && (
-              <ul className="absolute inset-x-0 top-full bg-green-200 border border-green-500 rounded-md z-20">
-                {autoComplete.map((item) => {
-                  return (
-                    <li
-                      key={item._id}
-                      className="px-4 py-2 hover:bg-green-300 cursor-pointer"
-                      onClick={() => handleSelect(item._id)}
+                      </svg>
+                      <h1 class="font-normal text-2xl leading-6 " style={{color : "#eaa636" , fontWeight :"bolder"}}>
+                      Sugar Canvas </h1>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="flex justify-center" style={{paddingLeft : "180px"}}>
+                  
+                    <div className="flex items-center text-white space-x-3 hover:underline sm:mx-3 sm:mt-0">
+                      <Link href="/">Home</Link>
+                    </div>
+                    <div className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0" style={{color : "white", hover: { color: "#eaa636" } }}>
+                      <Link href="/products">Shop</Link>
+                    </div>
+                    <div
+                      className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0"
+                      href="#"
                     >
-                      {item.name}
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
+                      <Link href="/products/category">Categories</Link>
+                    </div>
+                    <a
+                      className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0"
+                      href="#"
+                    >
+                      Contact
+                    </a>
+                    <a
+                      className="flex items-center space-x-3  text-white hover:underline sm:mx-3 sm:mt-0"
+                      href="#"
+                    >
+                      About
+                    </a>
+                  </div>
+                  </div>
+                  {/* <div className="flex items-center justify-end w-full"> */}
+                    <button className="text-white focus:outline-none mx-4 sm:mx-0">
+                      <ShoppingCartIcon
+                        onClick={() => setIsCartOpen(!isCartOpen)}
+                        className="h-5 w-5"
+                      />
+                    </button>
+                  
+                    <div className="flex sm:hidden">
+                      <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        type="button"
+                        className="text-white hover:text-gray-500 focus:outline-none focus:text-gray-500"
+                        aria-label="toggle menu"
+                      >
+                        <MenuIcon className="h-5 w-5" />
+                      </button>
+                    </div>
+                  {/* </div> */}
+                {/* </div> */}
+              </nav>
+            </div>
           </div>
         </div>
       </header>

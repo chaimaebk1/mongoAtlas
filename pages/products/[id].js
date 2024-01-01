@@ -40,6 +40,8 @@ const ProductDetails = () => {
           <Head>
             <title>MongoDB E-Commerce Demo - {product.name}</title>
             <link rel="icon" href="/favicon.ico" />
+            <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./css/style.css"/>
           </Head>
           <div className="bg-white w-full min-h-screen">
             <Header />
