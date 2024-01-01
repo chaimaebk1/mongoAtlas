@@ -59,7 +59,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className="container " style={{position : "fixed" , zIndex : "1000"}}>
+        <div className="container " style={{position : "fixed" , zIndex : "100"}}>
         <div className="2xl:container 2xl:mx-auto" >
             <div className="bg-white rounded shadow-lg py-5 px-7" style={{backgroundColor : "#1E1916"}}>
               <nav
