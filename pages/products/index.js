@@ -42,7 +42,7 @@ export default function Home() {
       </Head>
       <div className="bg-white w-full min-h-screen">
         <Header />
-        {/* <Container> */}
+        <Container>
           <Search/>
           <Category
             category="All Products"
@@ -50,7 +50,7 @@ export default function Home() {
           />
           <Products products={products} />
           <Pagination />
-        {/* </Container> */}
+        </Container>
         <Footer />
       </div>
     </div>

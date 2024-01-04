@@ -15,13 +15,13 @@ const Product = ({ product }) => {
             objectFit="cover"
             className="absolute z-0"
           />
-          <button className="absolute z-10 p-2 rounded-full bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500 focus:outline-none focus:bg-green-500">
+          <button className="absolute z-10 p-2 rounded-full  text-white mx-5 -mb-4  focus:outline-none focus:bg-green-500" style={{backgroundColor : "rgb(234, 166, 54)"}}>
             <ShoppingCartIcon className="w-5 h-5" />
           </button>
         </div>
         <div className="px-5 py-3">
-          <h3 className="text-gray-700 uppercase">{product.name}</h3>
-          <span className="text-gray-500 mt-2">${product.price}</span>
+        <h3 className="text-lg uppercase" style={{color :"rgb(234, 166, 54)" , fontWeight : "bold"}}>{product.name}</h3>
+        <span className=" mt-2" style={{color :"rgb(30, 25, 22)" , fontWeight : "bold"}}>${product.price}</span>
         </div>
       </div>
     </Link>

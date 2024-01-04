@@ -4,8 +4,8 @@ import { PlusCircleIcon, MinusCircleIcon } from "@heroicons/react/outline";
 
 const ProductDetail = ({ product }) => {
   return (
-    <div className="md:flex md:items-center">
-      <div className="w-full h-64 md:w-1/2 lg:h-96 relative">
+    <div className="md:flex md:items-center" >
+      <div className="w-full h-64 md:w-1/2 lg:h-96 relative"style={{marginTop : "9%"}}>
         <Image
           src={product.image}
           alt={product.name}

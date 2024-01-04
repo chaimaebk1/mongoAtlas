@@ -83,30 +83,21 @@ const Header = () => {
                   </div>
                   <div className="flex justify-center" style={{paddingLeft : "180px"}}>
                   
-                    <div className="flex items-center text-white space-x-3 hover:underline sm:mx-3 sm:mt-0">
-                      <Link href="/">Home</Link>
-                    </div>
-                    <div className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0" style={{color : "white", hover: { color: "#eaa636" } }}>
-                      <Link href="/products">Shop</Link>
-                    </div>
-                    <div
-                      className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0"
-                      href="#"
-                    >
-                      <Link href="/products/category">Categories</Link>
-                    </div>
-                    <a
-                      className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0"
-                      href="#"
-                    >
-                      Contact
-                    </a>
-                    <a
-                      className="flex items-center space-x-3  text-white hover:underline sm:mx-3 sm:mt-0"
-                      href="#"
-                    >
-                      About
-                    </a>
+                  <div className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0">
+                    <Link href="/">Home</Link>
+                  </div>
+                  <div className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0">
+                    <Link href="/products">Shop</Link>
+                  </div>
+                  <div className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0">
+                    <Link href="/products/category">Categories</Link>
+                  </div>
+                  <div className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0">
+                    <Link href="/about">About</Link>
+                  </div>
+                  <a className="flex items-center space-x-3 text-white hover:underline sm:mx-3 sm:mt-0" href="#">
+                    Contact
+                  </a>
                   </div>
                   </div>
                   {/* <div className="flex items-center justify-end w-full"> */}
