@@ -2,7 +2,8 @@
 
 Welcome to the Pastry Shop website project! This project is built using MongoDB Atlas, Node.js (with Next.js framework), and Tailwind CSS. It is an e-commerce platform for a pastry shop that includes features such as product search by name, filter by categories, and order placement.
 
-![Uploading localhost_3000_.png…]()
+![localhost_3000_](https://github.com/chaimaebk1/mongoAtlas/assets/138295122/07155d4b-b978-4621-b69d-9f021768f23d)
+
 
 ## Table of Contents
 - [Features](#features)
