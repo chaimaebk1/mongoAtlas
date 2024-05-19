@@ -82,6 +82,3 @@ We welcome contributions to improve the Pastry Shop website. To contribute:
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
-
-Thank you for using the Pastry Shop website project! If you have any questions or feedback, feel free to open an issue or contact us directly.
